@@ -47,9 +47,9 @@ public class CompileFFMPEG {
 			throw new RuntimeException("Invalid target directory: " + args[0]);
 
 		// Make sure FFMPEG is checked out
-		File ffmpeg = new File(target, "ffmpeg");
+		File ffmpeg = new File(target, "FFmpeg");
 		if (!ffmpeg.exists())
-			exec(target, "git", "clone", "git://fiji.sc/ffmpeg.git");
+			exec(target, "git", "clone", "https://github.com/FFmpeg/FFmpeg.git");
 		if (!FileUtils.exec(ffmpeg, System.err, null, "git", "rev-parse", "HEAD").equals(FFMPEG_COMMIT + "\n"))
 			exec(ffmpeg, "git", "checkout", FFMPEG_COMMIT);
 

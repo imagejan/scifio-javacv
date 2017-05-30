@@ -19,6 +19,7 @@
 
 	<properties>
 	    <ffmpeg.rootdir>${basedir}</ffmpeg.rootdir>
+	    <imagej.version>2.0.0-beta6</imagej.version>
 	</properties>
 
 	<modules>
